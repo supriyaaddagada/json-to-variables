@@ -1,0 +1,17 @@
+name: 'JSON to variables'
+author: 'Anton Ivanenko'
+description: 'This action reads json file and writes its content as environment variables'
+branding:
+  icon: 'box'
+  color: 'purple'
+inputs:
+  filename: 
+    description: 'The json file.'
+    required: true
+  prefix:
+    description: 'The prefix for variables.'
+    required: false
+    default: ''
+runs:
+  using: 'node18'
+  main: 'dist/index.js'
